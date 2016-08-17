@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above three tags MUST come first for Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+    <style>
+      body {
+        background-color: #333;
+      }
+      div#color-bar {
+        margin: 10px;
+      }
+      div.LED {
+        background-color:black;
+        float:left;
+        clear:none;
+        margin:0;
+        padding:0;
+      }
+      div.LED:hover {
+        border:1px solid white;
+        margin: -1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="content">
+	<header>
+	</header>
+	<div id="color-bar">
+          <label for="led-text">Text
+            <input type="text" name="led-text" id="led-text" />
+          </label>
+          <label for="text-color">Text Color
+            <input type="color" name="text-color" id="text-color" value="#ff0000" />
+          </label>
+          <br>
+          <label for="bg-color">Background Color
+            <input type="color" name="bg-color" id="bg-color" value="#000000" />
+          </label>
+          <button id="update-text">Update Text</button>
+          <br />
+          <label for="">Scroll direction
+            <select name="scroll-direction" id="scroll-direction">
+              <option value="none">None</option>
+              <option value="l---">Left</option>
+              <option value="-r-">Right</option>
+              <option value="--d-">Down</option>
+              <option value="---u">Up</option>
+              <option value="l--u">Left + Up</option>
+              <option value="l-d-">Left + Down</option>
+              <option value="-r-u">Right + Up</option>
+              <option value="-rd-">Right + Down</option>
+            </select>
+          </label>
+          <button id="start-animation">Start animation</button>
+	</div>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+    <script src="../src/led.js"></script>
+  </body>
+</html>
